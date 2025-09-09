@@ -39,7 +39,7 @@
                 }
 
                 if(!email.includes("@")){
-                    errorMessages += "Email must contain the character @.";
+                    errorMessages += "Email must contain the character @.\n";
                 }
 
                 // if(email.indexOf("@") == -1){
@@ -47,7 +47,7 @@
                 // }
 
                 if(password === ""){
-                    errorMessages += "Password must be non-emtpy.\n";
+                    errorMessages += "Password must be non-empty.\n";
                 }
 
                 if(errorMessages){

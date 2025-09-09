@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+
+<body>
+    <h1>Shopping List</h1>
+    <h3>Get it done today</h3>
+    <input type="text" id="item" placeholder="enter items">
+    <button id="addBtn">Enter</button>
+
+    <ul id="list">
+
+    </ul>
+
+
+    <script>
+        const input = document.getElementById('item');
+        const list = document.getElementById('list');
+
+        function add() {
+            const inputVal = input.value.trim();
+            if (!inputVal) return;
+            const li = document.createElement('li');
+            li.textContent = inputVal;
+            list.appendChild(li);
+            input.value = "";
+            input.focus();
+        }
+
+        document.getElementById("addBtn").addEventListener('click', add);
+        input.addEventListener('keydown', e => { if (e.key === "Enter") add(); });
+    </script>
+</body>
+
+</html>

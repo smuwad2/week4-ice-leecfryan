@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <style>
-
         #div1 {
             width: 200px;
             height: 200px;
@@ -10,24 +10,45 @@
         }
 
         /* add CSS code here */
-        
+        #div2 {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+            border-radius: 50%;
+        }
     </style>
 
-    
+
 </head>
+
 <body>
-    
+
     <h2>Changing HTML Attribute Value</h2>
 
     <div id="div1"></div>
+    <div id="div2"></div>
 
     <button onclick="changeShape()">Make a change!</button>
 
     <script>
-        var square=true;
-       // add code here
-        
+        var square = true;
+        // add code here
+        let circleEl = document.getElementById('div2');
+        let squareEl = document.getElementById('div1');
+        circleEl.style.display = "none";
+        function changeShape() {
+            if (square) {
+                circleEl.style.display = "block";
+                squareEl.style.display = "none";
+            } else {
+                circleEl.style.display = "none";
+                squareEl.style.display = "block";
+            }
+
+            square = !square;
+        }
     </script>
 
 </body>
+
 </html>
